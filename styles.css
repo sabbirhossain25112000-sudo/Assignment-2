@@ -59,7 +59,8 @@ body{
   background-image: url("B13-A02-TechWave/assets/hero-bg.png");
   background-repeat: no-repeat;
   background-position: center center; 
-  background-size: cover;             
+  background-size: cover;
+              
 
   display:flex;
   flex-direction:column;
@@ -189,10 +190,13 @@ body{
 
 
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
+  
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
+  background-color:  rgba(26, 11, 46, 1); 
+  
 }
 
 h1 {
@@ -242,8 +246,9 @@ h1 {
 
 
 .features-section{
-  max-width:1200px;
-  margin:80px auto;
+  max-width:1600px;
+  margin:0 auto;
+  background-color:#230E3D;
   padding:0 20px;
   color:white;
 }
@@ -276,6 +281,49 @@ h1 {
   border-radius:24px;
   border:1px solid rgba(255,255,255,0.1);
 }
+
+
+.feature-card{
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border 0.35s ease;
+  cursor: pointer;
+}
+
+
+.feature-card:hover{
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 40px rgba(145, 0, 248, 0.35),
+    0 0 0 1px rgba(251, 9, 180, 0.6);
+  border-color: rgba(251, 9, 180, 0.8);
+}
+
+
+.feature-card:hover h3{
+  background: linear-gradient(180deg,#F7E93F,#FB09B4,#9100F8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.feature-card img{
+  transition: transform 0.35s ease;
+}
+
+.feature-card:hover img{
+  transform: scale(1.15) rotate(3deg);
+}
+
+
+@media (max-width: 768px){
+  .feature-card:hover{
+    transform: none;
+    box-shadow: none;
+  }
+}
+
 
 
 @media(max-width:992px){
